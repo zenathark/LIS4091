@@ -1,0 +1,7 @@
+name             'site-cookbooks/link-firewall'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures site-cookbooks/link-firewall'
+long_description 'Installs/Configures site-cookbooks/link-firewall'
+version          '0.1.0'
