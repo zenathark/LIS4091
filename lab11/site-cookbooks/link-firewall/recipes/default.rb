@@ -19,6 +19,11 @@ template '/tmp/iptables.save' do
   cookbook 'link-firewall'
 end
 
+execute 'sysctl net.ipv4.ip_forward=1' do
+  user 'root'
+  command 'sysctl net.ipv4.ip_forward=1'
+end
+
 execute 'iptables-restore -c < /tmp/iptables.save' do
   user 'root'
   command 'iptables-restore -c < /tmp/iptables.save'

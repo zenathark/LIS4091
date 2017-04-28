@@ -18,7 +18,6 @@ Vagrant.configure('2') do |config|
     link.vm.network "forwarded_port", guest: 80, host: 8080
     link.vm.provision 'chef_solo' do |chef|
       chef.cookbooks_path = ['cookbooks', 'site-cookbooks']
-      chef.add_recipe 'apache2'
       chef.add_recipe 'link-firewall'
     end
 
