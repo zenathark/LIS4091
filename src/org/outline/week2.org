@@ -1,0 +1,74 @@
+#+LATEX_CLASS: lecture-document-udlap
+#+TITLE:
+#+OPTIONS: H:1 toc:nil
+#+HTML_DOCTYPE:
+
+#+BEGIN_EXPORT latex
+\renewcommand{\thecareer}{Computer Systems Engineering}
+\renewcommand{\thedocumenttitle}{Weeks 05, 06}
+\renewcommand{\theterm}{Spring 2017}
+\renewcommand{\thecoursename}{Network and Server Laboratory}
+\renewcommand{\thecoursecode}{LIS4091}
+\makeheadfoot
+#+END_EXPORT
+
+* Purpose
+This document describes the content and activities for Weeks 05 and 06 of the
+course *Network and Server Administration* with code *LI4081*. 
+
+* Instructor-led Training Activities
+  1. Creation of a BIOS based virtual appliance for a source based server
+  2. Learners will be guided through the installation process of Arch Linux
+  3. Steps
+     1. Create VM with 256RAM and 8Gb HDD
+        - 256RAM
+        - 8Gb HDD
+        - 128 MB Video (Important, failing on this parameter may cause keyboard malfunction)
+     2. Start VM and use a recent Arch Linux ISO
+     3. Run x86_64 bootable
+        1. If a mount error appears (initramfs unpacking failed) please check your ISO
+     4. Personal Choice = switch keyboard to dvorak-programmer
+        1. ~loadkeys programmer-dvorak~
+        2. Or load a latin keyboard
+           1. ~es~ when the char *@* is on your *2* key of the main keyboard
+           2. ~la-latin1~ when the char *@* is on your *Q* key
+     5. Use gparted~ to create partitions
+        + Create a label with type msdos
+          + ~mklabel msdos~
+        + Create a ~swap~ partition after the first ~MiB~ of 512MiB (double of RAM until 4GB)
+          + Primar
+          + ~linux-swap~
+          + ~mkpart primary linux-swap 1MiB 513MiB~
+        + Create a ~boot~ partition of 512MB or more
+          + Primary
+          + ~ext2~
+          + ~mkpart primary ext2 513MiB 1025MiB~
+        + Use the rest of the disk on another partition
+          + Primary
+          + ~ext4~
+          + ~mkpart primary ext4 1025MiB 100%~
+        + Turn on boot flag
+          + ~set 2 boot on~
+        + Check alignment
+          + ~align-check opt 1~
+        + If alignment throws an error, erase the table and start again
+     6. Format Partitions
+        1. ~mkswap /dev/sda1~
+        2. ~mkfs.ext2 /dev/sda2~
+        3. ~mkfs.ext4 /dev/sda4~
+        4. When in doubt of partition numbers use ~lsblk~
+     7. Mount the virtual drive to the ~/mnt~ partition
+        1. ~mount /dev/sda3 /mnt~
+        2. ~mkdir /mnt/boot~
+        3. ~mount /dev/sda2 /mnt/boot~
+     8. Activate swap space
+        1. ~swapon /dev/sda1~
+     9. Pull Arch base packages
+        1. ~pacstrap /mnt base base-devel~
+     10. Prepare file system
+         1. ~genstab -U > /mnt/etc/fstab~
+
+
+* Self-pace Learning Activities
+  + [[https://wiki.archlinux.org/index.php/Installation_guide][Arch Linux official installation guide]]
+  + [[https://youtu.be/lizdpoZj_vU][Arch Linux Installation Tutorial]]

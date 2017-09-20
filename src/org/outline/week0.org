@@ -1,0 +1,46 @@
+#+LATEX_CLASS: lecture-document-udlap
+#+TITLE:
+#+OPTIONS: H:1 toc:nil
+#+HTML_DOCTYPE:
+
+#+BEGIN_EXPORT latex
+\renewcommand{\thecareer}{Computer Systems Engineering}
+\renewcommand{\thedocumenttitle}{Weeks 00, 01}
+\renewcommand{\theterm}{Spring 2017}
+\renewcommand{\thecoursename}{Network and Server Laboratory}
+\renewcommand{\thecoursecode}{LIS4091}
+\makeheadfoot
+#+END_EXPORT
+
+* Purpose
+This document describes the content and activities for Weeks 00 and 01 of the
+course *Network and Server Administration* with code *LI4091*.
+
+* Instructor-led Training Activities
+
+1. Exploring the Virtual Box Interface.
+
+   This activity will allow learners to get acquainted with the hypervisor to be
+   used on the next activities. This tool will be required for the capstone
+   project.
+
+   Students can also use the next resources for extra information.
+
+   - [[https://youtu.be/lUs-lePHb0o][VirtualBox for Virtualization ]][[https://youtu.be/lUs-lePHb0o]]
+
+   - [[https://youtu.be/IlV429snFQw][Virtual Desktops and Servers]] https://youtu.be/IlV429snFQw
+
+2. Install a Simple Linux Application.
+
+   In this activity, the student will install a full Linux distribution targeted
+   to desktop environments with the help of Virtualbox.
+
+   Students can also use the next resources for extra information.
+
+   - [[https://youtu.be/oSdchGgZrMM][Installing Linux Mint]] https://youtu.be/oSdchGgZrMM
+
+* Self-pace Learning Activities
+
+1. Watch the following material:
+
+   - [[https://youtu.be/tlI8okaWXVM][Introduction to Windows Server 2012]] https://youtu.be/tlI8okaWXVM

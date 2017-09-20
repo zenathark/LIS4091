@@ -1,0 +1,40 @@
+#+LATEX_CLASS: lecture-document-udlap
+#+TITLE:
+#+OPTIONS: H:1 toc:nil
+#+HTML_DOCTYPE:
+
+#+BEGIN_EXPORT latex
+\renewcommand{\thecareer}{Computer Systems Engineering}
+\renewcommand{\thedocumenttitle}{Weeks 07, 08}
+\renewcommand{\theterm}{Spring 2017}
+\renewcommand{\thecoursename}{Network and Server Laboratory}
+\renewcommand{\thecoursecode}{LIS4091}
+\makeheadfoot
+#+END_EXPORT
+
+* Purpose
+This document describes the content and activities for Weeks 07 and 08 of the course
+*Network and Server Administration* with code *LI4091*.  
+
+* Instructor-led Training Activities
+  1. Continue with the installation of arch linux.
+     This week, arch linux installation continues:
+     + Add a normal user
+     + Set permissions and create the wheel group
+     + Configure the network
+     + Review the needed packgaes for development environment
+
+* Self-pace Learning Activities
+  1. [[https://wiki.archlinux.org/index.php/Network_configuration][Arch Linux Network Documentation]] (Reading)
+  2. [[https://youtu.be/PEa1xopeufQ][Linux Network Configuration]] (Video)
+  3. [[http://www.xml.com/ldd/chapter/book/ch14.html][Linux Network Drivers]] (Advanced Reading)
+
+* Assignment: Installing Linux
+  1. Install a linux distribution on a virtual appliance with the following characteristics:
+     + Must be one of the following distributions: Gentoo, Arch Linux, LFS.
+     + It must have the following partitions:
+       + home
+       + boot
+       + swap
+     + It must have one NAT network interface with functional Internet
+     + It must have at least one normal user with wheel privileges (~SUDO~)
