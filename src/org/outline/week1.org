@@ -29,7 +29,6 @@ This document describes the content and activities for Weeks 02 and 03 of the co
    2. Make the ~$HOME/projects/houses/doors/~ directory
       path. Create the following empty files within this directory path (try
       using absolute and relative paths from your home directory):
-      #+attr_latex: :options outputdir=build
       #+begin_src shell :results silent :export code
       $HOME/projects/houses/bungalow.txt
       $HOME/projects/houses/doors/bifold.txt
